@@ -1,0 +1,220 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.container{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(204, 203, 203, 0.65);
+    position: relative;
+}
+
+.container .innerContainer{
+    width:28%;
+    height:fit-content;
+    background: whitesmoke;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    z-index:30;
+}
+
+.container .innerContainer::before{
+    content: "";
+    position: absolute;
+    width:100%;
+    height:20px;
+    top:0;
+    left:0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: linear-gradient(180deg, rgb(5, 5, 155), rgba(25, 25, 241, 0.281));
+    z-index: 0;
+}
+
+.container .innerContainer h3{
+    text-align: center;
+    font-size: 1.5rem;
+    font: 700;
+    padding:15px 0px 15px 0px;
+    z-index: 10;
+}
+
+.container .innerContainer .btn{
+    display: flex;
+    width:100%;
+    height: fit-content;
+}
+
+.innerContainer .btn .signupBtn{
+    width:50%;
+    text-align: center;
+    border-radius:20px;
+    padding:10px;
+    margin:0px 5px 0px 0px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.activeBtn{
+    background: linear-gradient(180deg, rgb(5, 5, 155), rgb(25, 25, 241));
+    color:white;
+}
+
+.noDisplay{
+    display: none;
+}
+
+.innerContainer .btn .loginBtn{
+    width:50%;
+    text-align: center;
+    border-radius:20px;
+    padding:10px;
+    margin:0px 0px 0px 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.innerContainer form{
+    padding-top:15px;
+}
+
+.innerContainer form .formInput{
+    display:flex;
+    flex-direction: column;
+}
+
+form .formInput label{
+    padding: 15px 0 5px 5px;
+}
+
+form .formInput label>span{
+    color:red;
+    padding:3px;
+    font-weight: 600;
+}
+
+form .formInput input{
+    padding: 7px;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+form .formInput button{
+    padding:10px;
+    margin:30px 0 15px 0;
+    border-radius:20px;
+    background: linear-gradient(180deg, rgb(5, 5, 155), rgb(25, 25, 241));
+    font-size: 1.2rem;
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+form p{
+    text-align: center;
+    padding:5px;
+}
+
+form p:nth-of-type(2){
+    font-size: 0.8rem;
+    color:red;
+    cursor:pointer;
+    font-weight: 600;
+}
+
+.container .animation{
+    width:90%;
+    height:100%;
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    align-items: flex-end;
+    margin-bottom:-20px;
+    margin:auto;
+}
+
+.container .animation img:nth-child(odd){
+    width:40px;
+    height:40px;
+    margin-right:10%;
+    animation: floating 5s linear infinite
+}
+
+.container .animation img:nth-child(even){
+    width:80px;
+    height:80px;
+    margin-bottom:-10%;
+    animation: floating2 7s linear infinite;
+}
+
+@keyframes floating{
+    0%{
+        margin-bottom:10%;
+        margin-left:10px;
+    }
+    10%{
+        margin-bottom:15%;
+        margin-left:10px;
+    }
+    15%{
+        margin-bottom:25%;
+        margin-left:20px;
+    }
+    30%{
+        margin-bottom:15%;
+        margin-left:10px;
+    }
+    50%{
+        margin-bottom:35%;
+        margin-left:20px;
+    }
+    70%{
+        margin-bottom:55%;
+        margin-left:10px;
+    }
+    85%{
+        margin-bottom:45%;
+        margin-left:20px;
+    }
+    100%{
+        margin-bottom:80%;
+        margin-left:10px;
+
+    }
+}
+
+@keyframes floating2{
+    0%{
+        margin-bottom:0%
+    }
+    10%{
+        margin-bottom:15%
+    }
+    15%{
+        margin-bottom:30%
+    }
+    30%{
+        margin-bottom:25%
+    }
+    50%{
+        margin-bottom:45%
+    }
+    70%{
+        margin-bottom:55%
+    }
+    85%{
+        margin-bottom:40%
+    }
+    100%{
+        margin-bottom:65%
+    }
+}
